@@ -31,7 +31,7 @@ app.use(addChildLogger)
 app.use(cookieParser(process.env.COOKIE_SECRET))
 
 //kafka client
-main().catch(err => console.log('Error in kafka consumer: ', err))
+// main().catch(err => console.log('Error in kafka consumer: ', err))
 
 // Routes
 app.use('/api', addSessionUserToRequest, router)
