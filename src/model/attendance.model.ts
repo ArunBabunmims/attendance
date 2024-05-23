@@ -51,7 +51,12 @@ export async function getFacultyAttendanceList(
     offset: number,
     search: string,
     role: Role,
-) {
+) 
+{
+    console.log('limitlimit',limit);
+    console.log('offsetoffset',offset);
+    
+    
     const data = await sql<UserAttendanceList[]>`
     SELECT e.event_name,
            TO_CHAR(das.start_time, 'YYYY-MM-DD HH24:MI') as start_time,

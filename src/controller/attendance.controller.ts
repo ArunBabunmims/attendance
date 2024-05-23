@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import { HTTP_STATUS } from '@constants/http.constants'
- 
+
 import { getAttendanceStudentList, getAttendanceStudentListMarked, getCountFacultyAttendanceList, getFacultyAttendanceList, getFacultyAttendanceListAppNew, getFacultyAttendanceListMarked, getSubmitStudentAttendance, getSubmitStudentAttendanceApp } from '@model/attendance.model'
 
 
@@ -12,6 +12,9 @@ export async function facultyAttendanceList(req: Request, res: Response) {
     console.log("Heloooooooooooooooooooo");
     
     const { limit, offset, search = '' } = req.query
+
+    console.log('req.dggdhd',req.query);
+    
 
     const { userSession } = res.locals
     console.log("userSession::::::::::::", userSession);
